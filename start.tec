@@ -1,0 +1,43 @@
+
+1. Install Bundle
+
+1.1 创建~/.vim目录和.vimrc文件
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+1.2 添加一个~/.vimrc.bundles文件来保存所有插件的配置, 在~/.vimrc文件加入以下代码片段:
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
+
+1.3 配置.vimrc.bundles如下：
+" vundle 环境设置  
+filetype off  
+set rtp+=~/.vim/bundle/Vundle.vim             
+" vundle 管理的插件列表必须位于 vundle#begin() 和 vundle#end() 之间
+call vundle#begin() 
+Plugin 'VundleVim/Vundle.vim'
+"###### 中文 vim 帮助
+Plugin 'asins/vimcdoc'
+" 插件列表结束  
+call vundle#end()
+filetype on
+
+1.4 打开vim，执行bundle cli命令，见3。
+
+2. Bundle Config
+Bundle的配置文件中关于Bundle插件的配置必须在之间，同时：
+bundle分为三类，比较常用就是第二种：
+（1）在Github vim-scripts 用户下的repos,只需要写出repos名称
+（2）在Github其他用户下的repos, 需要写出”用户名/repos名”
+（3）不在Github上的插件，需要写出git全路径
+
+
+3. Bundle CLI
+打开vim，执行cli命令：
+:PluginInstall
+:PluginUpdate
+:PluginSearch
+:PluginList
+:PluginClean
+
+
