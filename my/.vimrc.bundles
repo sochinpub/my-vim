@@ -5,11 +5,20 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " vundle 管理的插件列表必须位于 vundle#begin() 和 vundle#end() 之间
 call vundle#begin() 
 
-
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'VundleVim/Vundle.vim'
-"###### 中文 vim 帮助
+"##### 中文 vim 帮助
 Plugin 'asins/vimcdoc'
+Plugin 'vim-scripts/OmniCppComplete'
+"##### syntastic支持很多语言的语法检查
+Plugin 'vim-syntastic/syntastic'
+"##### 自动括号补全
+Plugin 'jiangmiao/auto-pairs'
+"##### Tab补全
+Plugin 'ervandew/supertab'
+"##### 项目文件浏览树
+Plugin 'scrooloose/nerdtree'
+"##### tag list
+Plugin 'taglist.vim'
 
 " 插件列表结束  
 call vundle#end()
