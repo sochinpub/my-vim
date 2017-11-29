@@ -17,3 +17,8 @@ endif
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+"
+"taglist
+"
+let Tlist_Use_Right_Window=1 "在Vim窗口右侧显示taglist窗口"
