@@ -1,6 +1,7 @@
 yum remove vim*
 
-yum install gcc ncurses-devel perl perl-devel  
+yum install gcc ncurses-devel perl perl-devel cmake python-devel python3-devel
+
 
 ./configure --with-features=huge \
            --enable-fontset \
@@ -15,3 +16,19 @@ yum install gcc ncurses-devel perl perl-devel
            --enable-gui=gtk2 \
            --enable-cscope \
            --prefix=/usr
+make -j 2
+make install 
+
+# clang
+
+yum install cmake
+yum install epel-release
+yum install clang
+
+yum install boost-devel
+
+
+# YouCompleteMe
+
+python ~/.vim/bundle/YouCompleteMe/install.py
+

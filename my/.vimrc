@@ -1,3 +1,8 @@
+"##### TAB设置
+set ts=4
+set expandtab
+set autoindent
+
 " ##### 插件配置
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
